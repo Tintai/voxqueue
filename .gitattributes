@@ -1,0 +1,30 @@
+# Line endings.
+#
+# Git's default is to convert text files to CRLF on checkout on Windows, which
+# silently breaks shell scripts: "bash\r" is not a command. Forcing LF for the
+# scripts and normalising everything else avoids a class of bugs that only
+# appears on someone else's machine.
+* text=auto
+
+*.sh    text eol=lf
+*.bat   text eol=crlf
+*.cmd   text eol=crlf
+*.ps1   text eol=crlf
+
+*.cs    text eol=lf
+*.csproj text eol=lf
+*.py    text eol=lf
+*.md    text eol=lf
+*.json  text eol=lf
+*.txt   text eol=lf
+*.spec  text eol=lf
+
+# Binary — never convert, never diff as text.
+*.ico   binary
+*.png   binary
+*.exe   binary
+*.wav   binary
+*.mp3   binary
+*.m4a   binary
+*.ogg   binary
+*.flac  binary

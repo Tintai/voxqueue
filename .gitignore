@@ -1,0 +1,44 @@
+# Build output
+bin/
+obj/
+dist/
+build/build/
+build/.work-*/
+build/.work-linux
+
+# Published binaries — built artefacts, never source
+publish/*/VoxQueue
+publish/*/VoxQueue*.exe
+publish/*/*.dll
+publish/*/*.pdb
+publish/*/*.tar.gz
+publish/*/*.deb
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+
+# Local settings and job state
+config.json
+config.json.broken
+.voxqueue/
+.tmp/
+
+# Audio in any form. Rendered clips and voice samples belong on disk, not in
+# git: they are large, binary, and regenerable from metadata.csv.
+*.wav
+*.mp3
+*.m4a
+*.ogg
+*.flac
+samples/
+recordings/
+
+# Version backups
+backups/
+
+# Developer tooling — generators and one-off scripts, not part of the app
+tools/
+docs/local/

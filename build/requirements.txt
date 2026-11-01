@@ -1,0 +1,9 @@
+# Runtime dependencies for VoxQueue.
+# Install with:  python -m pip install -r build/requirements.txt
+
+PySide6>=6.6,<7        # Qt widgets, media playback
+numpy>=1.24            # audio analysis (defect detection, normalisation)
+Pillow>=10.0           # icon generation (tools/make_icon.py)
+
+# Build-time only
+pyinstaller>=6.0

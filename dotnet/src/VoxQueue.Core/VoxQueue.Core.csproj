@@ -1,0 +1,23 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <!--
+    VoxQueue.Core — everything that is not UI: text splitting, audio analysis,
+    the TTS client, job state and translations.
+
+    TargetFramework is plain net10.0, not net10.0-windows, on purpose: this
+    library has to compile and run on Linux too, which is what makes it testable
+    without a Windows machine. Only VoxQueue.Desktop depends on WinForms.
+  -->
+  <PropertyGroup>
+    <TargetFramework>net10.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <LangVersion>latest</LangVersion>
+    <RootNamespace>VoxQueue.Core</RootNamespace>
+    <AssemblyName>VoxQueue.Core</AssemblyName>
+    <InvariantGlobalization>false</InvariantGlobalization>
+    <SatelliteResourceLanguages>en</SatelliteResourceLanguages>
+    <GenerateDocumentationFile>false</GenerateDocumentationFile>
+  </PropertyGroup>
+
+</Project>
